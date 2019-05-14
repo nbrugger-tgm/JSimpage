@@ -51,7 +51,7 @@ config.useBootstrap = false;
 let app = new App("name",config);
 app.start();
 ````
-for detailed information take a look at [enter link description here](Configuration.md)
+for detailed information take a look at [here](Configuration.md)
 
 ### Creating a Page
 A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
@@ -70,6 +70,6 @@ Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDAyNzMxMzQsMTU2ODQ3OTQxNiwtMT
-gzMjE2NTU5NCwyMzc0NzIwNDNdfQ==
+eyJoaXN0b3J5IjpbOTI2NjQ1ODE0LDE1Njg0Nzk0MTYsLTE4Mz
+IxNjU1OTQsMjM3NDcyMDQzXX0=
 -->

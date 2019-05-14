@@ -57,7 +57,10 @@ for detailed information take a look at [here](Configuration.md)
 The most important one is `homeurl`. It is necessary for redirects and they may occour sometimes you dont like to have them when homeurl is not set.
 
 > Think of a situation where your side is hosted on example.com/side
-
+````js
+config.homeurl = side/
+config.homeurl = example.com/side
+````
 ### Creating a Page
 A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
 For structure reasons we create an folder `components` and within it a `pages` folder in which we this file: `home.html`
@@ -75,6 +78,6 @@ Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTI2MDY5OTAsOTI2NjQ1ODE0LDE1Nj
-g0Nzk0MTYsLTE4MzIxNjU1OTQsMjM3NDcyMDQzXX0=
+eyJoaXN0b3J5IjpbNDUyNjgxMjUwLDkyNjY0NTgxNCwxNTY4ND
+c5NDE2LC0xODMyMTY1NTk0LDIzNzQ3MjA0M119
 -->

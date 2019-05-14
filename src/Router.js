@@ -27,9 +27,7 @@ class Router {
     constructor(defaultPath, defaultPage = DefaultPage){
         let _this = this;
         window.onpopstate = function(event) {
-            if(!_this.openMatchingLocation()){
-                _this.fallback(_this,window.location.href);
-            }
+            _this.openMatchingLocation();
         };
         this.defaultRoute = defaultPath;
         this.addRoute(defaultPath,defaultPage);
@@ -63,6 +61,8 @@ class Router {
     /**
      * @param path {string}
      * @param url {string}
+     * @deprecated
+     * not implemented yet
      */
     addForward(path,url){
         this.forwards.put(path,url);
@@ -71,14 +71,12 @@ class Router {
 
     goTo(url){
         history.pushState({}, "title 1", url);
-        if(!this.openMatchingLocation()){
-            this.fallback(this,url);
-        }
+        this.openMatchingLocation();
+
     }
     apply(){
-        if(!this.openMatchingLocation()){
-            this.fallback(this,this.defaultRoute);
-        }
+        this.addRedirect("#",this.defaultRoute);
+        this.openMatchingLocation();
     }
 
 
@@ -166,7 +164,6 @@ class Router {
         }
         return false;
     }
-
     checkForwards() {
         return false;
     }

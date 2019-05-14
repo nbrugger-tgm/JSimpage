@@ -3,7 +3,7 @@
 We use ES6 as syntax and packaging system so the framewok might not works on IOS or Safari
 ### Get started
 The very starting point is an `index.html` to call the JS
-'''html
+````html
     <!DOCTYPE html>  
     <html lang="en">  
 	    <head>  
@@ -14,7 +14,8 @@ The very starting point is an `index.html` to call the JS
 	    <body>  
 	    </body>  
     </html>
-
+````
+The base of every app looks like this
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNDM0NTIxOV19
+eyJoaXN0b3J5IjpbLTExODk2MzUzNzBdfQ==
 -->

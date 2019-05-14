@@ -2,19 +2,23 @@ import Component from "../Component.js";
 
 class BootstrapRow extends  Component{
     /**
-     * @type {Array<BootstrapCol>}
+     * @param array {Array<BootstrapCol>}
      */
-    cells = [];
     set cells(array){
-        this.rebuild();
+        this.val("cells",array);
+    }
+    get cells(){
+        return this.val("cells");
     }
 
     constructor() {
         super("../src/components/row.html", function (c) {
-            for (let i = 0; i < c.cells.length; i++) {
-                c.get().append(c.cells[i].get());
-            }
+            if(c.cells !== undefined)
+                for (let i = 0; i < c.cells.length; i++) {
+                    c.get().append(c.cells[i].get());
+                }
         });
+        this.cells = [];
     }
 }
 

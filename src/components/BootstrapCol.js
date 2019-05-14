@@ -3,25 +3,35 @@ import Map from "../Map.js";
 import BaseComponent from "./BaseComponent.js";
 
 class BootstrapCol extends BaseComponent{
-    content;
+
     set content(value){
-        this.rebuild();
+        this.val("content",value);
+    }
+    get content(){
+        return this.val("content");
     }
 
-    responsive = new Map();
     set responsive(value){
-        this.rebuild();
+        this.val("responsive",value);
     }
 
-    fill = false;
+    get responsive(){
+        return this.val("responsive");
+    }
+
     set fill(value){
-        this.rebuild();
+        this.val("fill",value);
+    }
+    get fill(){
+        return this.val("fill");
     }
 
     constructor(listener= function () {}) {
         super("../src/components/col.html",
             function (c) {
                 let e = c.get();
+                if(c.responsive === undefined)
+                    return;
                 if(c.fill){
                     e.addClass("col");
                 }else{
@@ -35,6 +45,8 @@ class BootstrapCol extends BaseComponent{
             },
             listener
         );
+        this.responsive = new Map();
+        this.fill = false;
     }
 }
 const COL_SIZES = Object.freeze({

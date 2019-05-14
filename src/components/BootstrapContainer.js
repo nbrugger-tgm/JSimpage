@@ -2,21 +2,25 @@ import BaseComponent from "./BaseComponent.js";
 
 class BootstrapContainer extends BaseComponent{
     /**
-     * @type {Array<BootstrapRow>}
+     * @param rows {Array<BootstrapRow>}
      */
-    rows = [];
     set rows(rows){
-        this.rebuild();
+        this.val("rows",rows);
+    }
+    get rows(){
+        return this.val("rows");
     }
 
     constructor(listener = function () {}) {
         super("../src/components/container.html",function () {},listener);
+        this.rows = [];
     }
 
     build = function (c) {
-        for (let i = 0; i < c.rows.length; i++) {
-            c.get().append(c.rows[i].get());
-        }
+        if(c.rows !== undefined)
+            for (let i = 0; i < c.rows.length; i++) {
+                c.get().append(c.rows[i].get());
+            }
     };
 }
 

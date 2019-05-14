@@ -13,6 +13,7 @@ class DefaultPage extends Page{
     header = new BootstrapHeader();
     cont;
     build = function(c){
+        this.createContainer();
         c.get().append(c.header.get());
         c.get().append(c.cont.get());
     };
@@ -52,6 +53,7 @@ class DefaultPage extends Page{
         right.responsive.put(SIZES.NOSIZE,COL_SIZES._12);
         right.responsive.put(SIZES.Medium,COL_SIZES.auto);
         right.content = "But there is a lot to go!<br><a href='#variables/on/the/path/123'>Variables in Path</a>";
+
     }
 }
 export default DefaultPage;

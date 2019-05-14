@@ -38,8 +38,18 @@ window.app = app;
 A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
 For structure reasons we create an folder `components` and within it a `pages` folder in which we this file: `home.html`
 ````html
+<div>  
+	<div class="head"></div>  
+	<form>  
+		<input type="text" class="name">  
+		<input type="password" class="password">  
+		<button type="button"></button>  
+	</form>  
+</div>
+````
+Now we need an JS class to register listeners and inluding and Bootstrap header in the
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4OTcyNDgwOCwyMzc0NzIwNDNdfQ==
+eyJoaXN0b3J5IjpbLTE5MTI2NTc1NTgsMjM3NDcyMDQzXX0=
 -->

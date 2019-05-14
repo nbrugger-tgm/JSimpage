@@ -35,9 +35,10 @@ window.app = app;
 > Now We have a working webpage if you acess `localhost/pathtoindexhtml/index.html` you will see the sucess page
 
 ### Creating a Page
-A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` .
+A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
+For structure reasons we create an folder `components`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3NDcyMDQzXX0=
+eyJoaXN0b3J5IjpbMTc1MjgxOTkwNSwyMzc0NzIwNDNdfQ==
 -->

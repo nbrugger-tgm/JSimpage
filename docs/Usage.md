@@ -62,7 +62,7 @@ The most important one is `homeurl`. It is necessary for redirects and they may 
 //but pages ending with side (eg. example.com/side/user/brugger/side/)
 //will redirect the users to the home page
 config.homeurl = "side/";
-//This can only be used at one host but it is save tha
+//This can only be used at one host but you can be shure that it works as expected
 config.homeurl = "http://example.com/side";
 ````
 ### Creating a Page
@@ -82,6 +82,6 @@ Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQwMzIzNTAzLDkyNjY0NTgxNCwxNTY4ND
+eyJoaXN0b3J5IjpbMTU2Mjk5ODMxLDkyNjY0NTgxNCwxNTY4ND
 c5NDE2LC0xODMyMTY1NTk0LDIzNzQ3MjA0M119
 -->

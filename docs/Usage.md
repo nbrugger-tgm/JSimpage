@@ -31,6 +31,9 @@ app.start();
 //this line is optional for debugging or using the browser console  
 window.app = app;
 ````
+
+> Now We have a working webpage if you acess `localhost/pathtoindexhtml/index.html` you will  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjYzNTc5NTFdfQ==
+eyJoaXN0b3J5IjpbLTE0NjI1NzM3MjFdfQ==
 -->

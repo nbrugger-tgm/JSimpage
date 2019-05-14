@@ -16,6 +16,21 @@ The very starting point is an `index.html` to call the JS
     </html>
 ````
 The base of every app looks like this
+````javascript
+import App from "../../src/App.js";  
+import AppConfig from "../../src/AppConfig.js";
+  
+const config = new AppConfig(); 
+  
+const app = new App("Test",config);  
+//we will use that later  
+const router = app.router;  
+
+app.start();  
+  
+//this line is optional for debugging or using the browser console  
+window.app = app;
+````
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODk2MzUzNzBdfQ==
+eyJoaXN0b3J5IjpbLTE0MjYzNTc5NTFdfQ==
 -->

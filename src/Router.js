@@ -3,12 +3,10 @@ import Map from "./Map.js";
 import Error404 from "./components/error404.js";
 
 class Router {
-    /**
-     * @type {{}}
-     */
     routes = new Map();
     redirects = new Map();
     forwards = new Map();
+    listeners = new Map();
 
     /**
      * @type {string}
@@ -68,6 +66,15 @@ class Router {
         this.forwards.put(path,url);
     }
 
+    /**
+     * @param path {string}
+     * @param func {function}
+     * @deprecated
+     * not implemented yet
+     */
+    addListener(path,func){
+        this.listeners.put(path,func);
+    }
 
     goTo(url){
         history.pushState({}, "title 1", url);
@@ -103,6 +110,7 @@ class Router {
     }
 
     openMatchingLocation() {
+        this.checkListeners();
         if(!this.checkRoutes())
             if(!this.checkRedirects())
                 if(!this.checkForwards())
@@ -165,6 +173,27 @@ class Router {
         return false;
     }
     checkForwards() {
+        return false;
+    }
+
+    checkListeners() {
+        for (let i = 0; i <this.routes.size; i++) {
+            let route = this.routes.keys[i];
+            let parts = route.split("/").length;
+            let cuted =document.location.href.split(
+                "/",
+                document.location.href.split("/").length-parts
+            );
+            cuted = document.location.href.replace(cuted.join("/"),"");
+            cuted = cuted.substring(1,cuted.length);
+
+
+            let vars = Router.match(cuted,route,this.listeners);
+            if(vars !== null && vars !== undefined){
+               this.listeners.get(route)();
+               return true;
+            }
+        }
         return false;
     }
 }

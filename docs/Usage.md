@@ -59,9 +59,11 @@ The most important one is `homeurl`. It is necessary for redirects and they may 
 > Think of a situation where your side is hosted on example.com/side
 ````js
 //in this cases we can use it on all hosts (eg. notexample.ac.at/side) 
-//but pages ending with page (eg
+//but pages ending with side (eg. example.com/side/user/brugger/side/)
+//will redirect the users to the home page
 config.homeurl = "side/";
-config.homeurl = "example.com/side";
+//This can only be used at one host but it is save tha
+config.homeurl = "http://example.com/side";
 ````
 ### Creating a Page
 A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
@@ -80,6 +82,6 @@ Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NTQ4MjU3Myw5MjY2NDU4MTQsMTU2OD
-Q3OTQxNiwtMTgzMjE2NTU5NCwyMzc0NzIwNDNdfQ==
+eyJoaXN0b3J5IjpbODQwMzIzNTAzLDkyNjY0NTgxNCwxNTY4ND
+c5NDE2LC0xODMyMTY1NTk0LDIzNzQ3MjA0M119
 -->

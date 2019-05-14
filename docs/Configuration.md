@@ -16,6 +16,11 @@
  * The URL the user gets redirected to if he visits the main path * @type {string}  
  */
  defaultPath = "#home";  
+ /**  
+ * The home URL redirecting (eg. https://example.at/side/ ) 
+ * @type {string}  
+ */
+ homeurl = "/#";
 /**  
  * If this is true Bootstrap is loaded at startup 
  * @type {boolean}  
@@ -34,5 +39,5 @@
  charset = "UTF-8";
  ````
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzY2NzYwOThdfQ==
+eyJoaXN0b3J5IjpbMTkwMjg0MjM3NCwtMTMzNjY3NjA5OF19
 -->

@@ -22,7 +22,8 @@ import AppConfig from "../../src/AppConfig.js";
   
 const config = new AppConfig(); 
   
-const app = new App("Test",config);  
+const app = new App("Test",config); 
+ 
 //we will use that later  
 const router = app.router;  
 
@@ -60,5 +61,6 @@ Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzIxNjU1OTQsMjM3NDcyMDQzXX0=
+eyJoaXN0b3J5IjpbMTU2ODQ3OTQxNiwtMTgzMjE2NTU5NCwyMz
+c0NzIwNDNdfQ==
 -->

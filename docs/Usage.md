@@ -36,9 +36,11 @@ window.app = app;
 
 ### Creating a Page
 A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
-For structure reasons we create an folder `components`
+For structure reasons we create an folder `components` and within it a `pages` folder in which we this file: `home.html`
+
+ 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MjgxOTkwNSwyMzc0NzIwNDNdfQ==
+eyJoaXN0b3J5IjpbMTI0NTQ1NDE1NSwyMzc0NzIwNDNdfQ==
 -->

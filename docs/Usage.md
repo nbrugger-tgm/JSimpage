@@ -44,6 +44,9 @@ useBootstrap = true;
 bootstrapVersion = "4.3.1";  
 charset = "UTF-8";
 ````
+You can change them:
+````js
+let app = new A
 ### Creating a Page
 A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
 For structure reasons we create an folder `components` and within it a `pages` folder in which we this file: `home.html`
@@ -61,6 +64,6 @@ Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2ODQ3OTQxNiwtMTgzMjE2NTU5NCwyMz
-c0NzIwNDNdfQ==
+eyJoaXN0b3J5IjpbLTQ4MzYyMzY5MiwxNTY4NDc5NDE2LC0xOD
+MyMTY1NTk0LDIzNzQ3MjA0M119
 -->

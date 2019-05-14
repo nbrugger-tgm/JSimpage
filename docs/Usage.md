@@ -32,8 +32,12 @@ app.start();
 window.app = app;
 ````
 
-> Now We have a working webpage if you acess `localhost/pathtoindexhtml/index.html` you will  
+> Now We have a working webpage if you acess `localhost/pathtoindexhtml/index.html` you will see the sucess page
+
+### Creating a Page
+A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` .
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjI1NzM3MjFdfQ==
+eyJoaXN0b3J5IjpbMjM3NDcyMDQzXX0=
 -->

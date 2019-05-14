@@ -58,7 +58,8 @@ The most important one is `homeurl`. It is necessary for redirects and they may 
 
 > Think of a situation where your side is hosted on example.com/side
 ````js
-//here all 
+//in this cases we can use it on all hosts (eg. notexample.ac.at/side) 
+//but pages ending with page (eg
 config.homeurl = "side/";
 config.homeurl = "example.com/side";
 ````
@@ -79,6 +80,6 @@ Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEwNTE1ODgzLDkyNjY0NTgxNCwxNTY4ND
-c5NDE2LC0xODMyMTY1NTk0LDIzNzQ3MjA0M119
+eyJoaXN0b3J5IjpbLTk2NTQ4MjU3Myw5MjY2NDU4MTQsMTU2OD
+Q3OTQxNiwtMTgzMjE2NTU5NCwyMzc0NzIwNDNdfQ==
 -->

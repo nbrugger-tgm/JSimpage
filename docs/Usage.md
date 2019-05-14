@@ -46,7 +46,11 @@ charset = "UTF-8";
 ````
 You can change them:
 ````js
-let app = new A
+let config = new AppConfig();
+config.useBootstrap = false;
+let app = new App("name",config);
+app.start();
+'''
 ### Creating a Page
 A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
 For structure reasons we create an folder `components` and within it a `pages` folder in which we this file: `home.html`
@@ -64,6 +68,6 @@ Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MzYyMzY5MiwxNTY4NDc5NDE2LC0xOD
-MyMTY1NTk0LDIzNzQ3MjA0M119
+eyJoaXN0b3J5IjpbLTE2MDYwMDA1OTYsMTU2ODQ3OTQxNiwtMT
+gzMjE2NTU5NCwyMzc0NzIwNDNdfQ==
 -->

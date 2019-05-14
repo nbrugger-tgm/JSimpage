@@ -79,19 +79,18 @@ For structure reasons we create an folder `components` and within it a `pages` f
 </div>
 ````
 Now we need an JS class to register listeners and inluding and Bootstrap header. `home.js`
-import Page from "../../../src/Page";  
   
-js
+````js
+import Page from "../../../src/Page";  
 class home extends Page{  
 	constructor() {  
-	super("components/pages/home.html","Home");  
+		super("components/pages/home.html","Home");  
 	}
 }  
-
 export default home;
-
-
+````
+The first parameter is the path to the HTML for structure and 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg2OTA0ODY1LDkyNjY0NTgxNCwxNTY4ND
-c5NDE2LC0xODMyMTY1NTk0LDIzNzQ3MjA0M119
+eyJoaXN0b3J5IjpbLTc0MTQxMDk2NSw5MjY2NDU4MTQsMTU2OD
+Q3OTQxNiwtMTgzMjE2NTU5NCwyMzc0NzIwNDNdfQ==
 -->

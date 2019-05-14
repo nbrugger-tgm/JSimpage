@@ -33,7 +33,16 @@ window.app = app;
 ````
 
 > Now We have a working webpage if you acess `localhost/pathtoindexhtml/index.html` you will see the sucess page
-
+### Configuration
+There are certain configurations to do
+````js
+permaCache = false;  
+defaultPage = DefaultPage;  
+defaultPath = "#home";  
+useBootstrap = true;  
+bootstrapVersion = "4.3.1";  
+charset = "UTF-8";
+````
 ### Creating a Page
 A Page is like a new HTML file where the user can navigate to. And there is the Class `Page` . We like to create a page where the user can log in. *(we will also do the backend later)*
 For structure reasons we create an folder `components` and within it a `pages` folder in which we this file: `home.html`
@@ -47,9 +56,9 @@ For structure reasons we create an folder `components` and within it a `pages` f
 	</form>  
 </div>
 ````
-Now we need an JS class to register listeners and inluding and Bootstrap header in the
+Now we need an JS class to register listeners and inluding and Bootstrap header.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTI2NTc1NTgsMjM3NDcyMDQzXX0=
+eyJoaXN0b3J5IjpbLTE4MzIxNjU1OTQsMjM3NDcyMDQzXX0=
 -->

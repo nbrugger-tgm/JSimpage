@@ -21,6 +21,12 @@ class AppConfig {
      * @type {string}
      */
     defaultPath = "#home";
+
+    /**
+     * The home URL redirecting (eg. https://example.at/side/ )
+     * @type {string}
+     */
+    homeurl = "/#";
     /**
      * If this is true Bootstrap is loaded at startup
      * @type {boolean}

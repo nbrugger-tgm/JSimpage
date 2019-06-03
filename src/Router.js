@@ -92,7 +92,7 @@ class Router {
      * @param route {string}
      * @return {{}}
      */
-    static match(path,route,maping){
+    static match(path,route){
         let pathParts = path.split("/");
         let routeParts = route.split("/");
         let variables = {};
@@ -111,7 +111,10 @@ class Router {
 
     openMatchingLocation() {
         this.checkListeners();
-        if(!this.checkRoutes())
+        if(window.location.href.endsWith(Router.appConfig.homeurl)){
+            this.goTo(Router.appConfig.defaultPath);
+        }
+        else if(!this.checkRoutes())
             if(!this.checkRedirects())
                 if(!this.checkForwards())
                     this.fallback(this,window.location.href);
@@ -129,7 +132,7 @@ class Router {
             cuted = cuted.substring(1,cuted.length);
 
 
-            let vars = Router.match(cuted,route,this.routes);
+            let vars = Router.match(cuted,route);
             if(vars !== null && vars !== undefined){
                 let page = new (this.routes.get(route))();
                 for (let j = 0; j <  Object.keys(vars).length; j++) {
@@ -155,7 +158,7 @@ class Router {
             cuted = cuted.substring(1,cuted.length);
 
 
-            let vars = Router.match(cuted,route,this.redirects);
+            let vars = Router.match(cuted,route);
             if(vars !== null && vars !== undefined){
                 let target = this.redirects.get(route);
                 let keys =  Object.keys(vars);
@@ -177,8 +180,8 @@ class Router {
     }
 
     checkListeners() {
-        for (let i = 0; i <this.routes.size; i++) {
-            let route = this.routes.keys[i];
+        for (let i = 0; i <this.listeners.size; i++) {
+            let route = this.listeners.keys[i];
             let parts = route.split("/").length;
             let cuted =document.location.href.split(
                 "/",
@@ -188,7 +191,7 @@ class Router {
             cuted = cuted.substring(1,cuted.length);
 
 
-            let vars = Router.match(cuted,route,this.listeners);
+            let vars = Router.match(cuted,route);
             if(vars !== null && vars !== undefined){
                this.listeners.get(route)();
                return true;

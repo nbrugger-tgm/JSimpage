@@ -24,6 +24,7 @@
     "webpack": "^4.32.0"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.2",
+    "serialize-javascript": "2.1.1"
   }
 }
